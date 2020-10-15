@@ -1,0 +1,743 @@
+@font-face 
+  font-family: 'Montserrat-Regular' 
+  src: url('../fonts/Montserrat/Montserrat-Regular.woff') format("woff") 
+$color-brown: #C5A47E 
+body 
+  font-family: 'Montserrat-Regular', sans-serif
+h1 
+  font-size: 95px
+  font-weight: bold
+  @media screen and (max-width: 1200px) 
+    font-size: 8vw
+  @media screen and (max-width: 425px) 
+    font-size: 28px
+    margin-bottom: 15px
+h2 
+  font-size: 40px
+  margin-bottom: 20px
+  color: $color-brown
+  font-weight: bold
+  @media screen and (max-width: 1200px) 
+    font-size: 4vw
+  @media screen and (max-width: 425px) 
+    font-size: 18px 
+h3 
+  font-size: 35px
+  @media screen and (max-width: 1200px) 
+    font-size: 3vw
+  @media screen and (max-width: 425px) 
+    font-size: 16px  
+h5 
+  font-size: 24px
+  @media screen and (max-width: 1200px) 
+    font-size: 23px
+  @media screen and (max-width: 425px) 
+    font-size: 18px 
+
+.container 
+  margin: 0 auto
+  width: calc(100% - 405px)
+  padding-right: 15px
+  padding-left: 15px
+  @media screen and (min-width: 1400px) and ( max-width: 1480px ) 
+    width: calc(100% - 300px)
+  @media screen and (max-width: 1400px)
+    width: calc(100% - 105px)
+  @media screen and (max-width: 1200px)
+    width: 100%
+.row
+  flex-wrap: wrap
+.col-4 
+  flex: 0 0 25%
+  @media screen and (max-width: 1400px)
+    flex: 0 0 50%
+  @media screen and (max-width: 715px)
+    flex: 0 0 100%
+.col-3 
+  flex: 0 0 33.333%
+  padding: 15px
+  @media screen and (max-width: 992px)
+    padding: 15px
+  @media screen and (max-width: 715px)
+    flex: 100%
+.col-block-two 
+  flex: 0 0 50%
+  padding: 0 15px
+  @media screen and (max-width: 715px)
+    flex: 0 0 100%
+    padding: 0
+
+.d-flex 
+  display: flex
+.text-uppercase 
+  text-transform: uppercase
+.text-white 
+  color: #fff
+.text-center 
+  text-align: center
+.p-0 
+  padding: 0
+.pl-4
+  padding-left: 4px
+.pl-8
+  padding-left: 8px
+button.btn   
+  transition: .3s 
+
+header
+  position: absolute
+  width: 100%
+  z-index: 99999
+  @media screen and (max-width: 992px)
+    position: relative
+  .header-nav
+    justify-content: space-between
+    align-items: center
+    @media screen and (max-width: 992px) 
+      display: block
+      background: #3f3e3e  
+      padding-top: 5px  
+    .button-collapse 
+      display: none 
+      @media screen and (max-width: 992px) 
+        display: block
+        position: absolute
+        right: 15px
+        top: 38px
+        width: 48px
+        height: 10px
+        border: none
+        background: transparent
+        outline: none
+      span 
+        border-bottom: 2px solid $color-brown
+        width: 100%
+        display: block
+        transition: .3s
+        &:after, &:before 
+          content: ''
+          display: block
+          width: 75%
+          height: 2px
+          background: $color-brown
+          position: absolute
+          transition-duration: .3s, .3s
+          transition-delay: .3s, 0
+          transition: .3s
+        &:after 
+          top: -3px  
+          transition-property: top, transform       
+        &:before 
+          bottom: -3px   
+          transition-property: bottom, transform  
+    .nav-button-active span
+      border-bottom: 2px solid transparent
+      &:after, &:before 
+        transition-delay: 0, .3s                 
+      &:after 
+        top: 4px
+        transform: rotate(-45deg)
+      &:before 
+        bottom: 4px
+        transform: rotate(45deg)   
+    .header-nav__logo 
+      width: 140px
+      cursor: pointer
+      @media screen and (max-width: 992px) 
+        order: -1
+        width: 81px
+    .header-nav__list
+      width: 60%
+      justify-content: center
+      flex-wrap: wrap
+      @media screen and (min-width: 992.98px) 
+        display: flex!important
+      @media screen and (max-width: 992px) 
+        display: none
+        margin-top: 50px
+      li  
+        padding: 5px 20px 
+        position: relative    
+        @media screen and (max-width: 992px)  
+          padding: 40px 20px   
+        a 
+          color: $color-brown
+        &:after
+          content: ''
+          border-bottom: dashed $color-brown
+          display: block
+          width: 0
+          height: 3px
+          position: absolute
+          left: 0
+          transition: width 0.3s ease-out
+        &:hover
+          &:after
+            width: 100%
+    .header-nav__contact 
+      flex-direction: column
+      @media screen and (min-width: 992.98px) 
+        display: flex!important       
+      @media screen and (max-width: 992.98px) 
+        display: none
+        padding: 100px 20px 72px  
+      a:first-of-type
+        font-size: 28px
+        padding-bottom: 9px
+        transition: .3s
+        &:hover
+          color: $color-brown
+        @media screen and (max-width: 992.98px) 
+          display: block
+          margin-bottom: 40px
+      a:last-of-type 
+        font-size: 14px
+        color: $color-brown
+        text-align: end        
+        span
+          position: relative
+          &:after
+            content: ''
+            border-bottom: dashed $color-brown
+            display: block
+            width: 100%
+            height: 3px
+            position: absolute
+            left: 0
+            transition: width 0.3s ease-out
+          &:hover
+            &:after
+              width: 0
+
+main 
+  position: relative
+
+// секция "Главный экран" =====================
+section.section-home
+  padding-bottom: 90px
+  background: url('../img/header-photo.jpg') no-repeat
+  background-size: cover
+  justify-content: center
+  flex-direction: column
+  min-height: 100vh
+  @media screen and (max-width: 578px) 
+    min-height: auto
+  .section-home__title
+    text-align: center
+    margin: 255px 0 142px
+    @media screen and (max-width: 578px) 
+      margin: 130px 0 142px
+    h3 
+      color: $color-brown
+
+// секция "Наши достижния" =====================
+section.our-advantages 
+  .our-advantages__img
+    .our-advantages__img_col 
+      padding: 0 0 18% 0
+      overflow: hidden
+      position: relative
+      @media screen and (max-width: 1400px)
+        padding: 0 0 30% 0
+      @media screen and (max-width: 715px)
+        padding: 0 0 50% 0
+      img 
+        width: 100%
+        height: 100%
+        object-fit: cover
+        object-position: top
+        position: absolute
+        top: 0
+        left: 0
+  .our-advantages__card
+    background: url('../img/stock-vectexture-advantages.jpg') no-repeat
+    background-size: cover
+    padding: 60px 0
+    .container 
+      @media screen and (max-width: 1200px)
+        padding: 0
+      h2 
+        @media screen and (max-width: 992px)
+          margin-bottom: 16px
+      .card
+        max-height: 300px
+        .card-header
+          h5 
+            font-weight: bold
+            padding-bottom: 17px
+        .card-body
+          max-height: 252px
+          overflow-y: hidden
+          p 
+            max-height: 212px
+            overflow-y: scroll
+
+// секция "Воплотим ваши мечты" =====================
+section.make-dreams 
+  .container
+    @media screen and (min-width: 1480px)
+      width: calc(100% - 202.5px)
+      padding-left: 116.5px
+    @media screen and (min-width: 1401px) and ( max-width: 1480px ) 
+      width: calc(100% - 150px)
+      padding-left: 86.5px
+    .make-dreams-box 
+      justify-content: space-between
+      .make-dreams-box__info 
+        flex: 0 0 30%
+        min-height: 370px
+        position: relative
+        padding: 0 15px
+        @media screen and (max-width: 1200px)
+          flex: 0 0 100%
+          margin-bottom: 60px
+          min-height: auto
+          padding: 0
+        p 
+          margin-bottom: 20px
+          max-height: 271px
+          overflow-y: scroll
+        .make-dreams-box__info_btn
+          background: $color-brown
+          box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25)
+          border: none
+          padding: 13px 32px
+          font-size: 18px
+          font-weight: bold
+          position: absolute
+          bottom: 0
+          transition: .3s
+          @media screen and (max-width: 1200px)
+            position: relative
+          &:hover 
+            background: #9a7f60
+      .make-dreams-box__img
+        flex: 0 0 56%
+        padding: 0 0 34% 0
+        margin: 0 15px
+        position: relative
+        @media screen and (max-width: 1200px)
+          flex: 0 0 100%
+          padding: 0 0 61% 0
+          margin: 0
+        img
+          width: 100%
+          height: 100%
+          object-fit: cover
+          position: absolute
+          top: 0
+          left: 0
+
+// секция "Отделочные работы" =====================
+section.finishing-work 
+  background: url('../img/stock-vectexture-advantages.jpg') no-repeat
+  background-size: cover
+  padding: 60px 0
+  .container 
+    .row 
+      .col-4 
+        padding: 15px
+        @media screen and ( max-width: 1200px )
+          padding: 0
+        .card 
+          .card__header 
+            position: relative
+            padding: 0 0 100% 0
+            img 
+              position: absolute
+              width: 100%
+              height: 100%
+              object-fit: cover
+          .card__body 
+            padding: 19px 15px
+            h5 
+              margin-bottom: 15px
+              font-weight: bold
+            p 
+              max-height: 135px
+              overflow-y: scroll
+
+// секция "Наши работы" =====================
+section.our-work 
+  .container 
+    width: calc( 100% - 76px )
+    @media screen and ( max-width: 1400px )
+      width: 100%
+    @media screen and (max-width: 1200px)
+      padding: 0
+    .row 
+      .col-3 
+        @media screen and ( max-width: 992px )
+          flex: 0 0 100%
+        .card 
+          .card__header 
+            position: relative
+            padding: 0 0 56% 0
+            img 
+              position: absolute
+              width: 100%
+              height: 100%
+              object-fit: cover
+          .card__body 
+            h4 
+              margin: 20px 0
+            a
+              color: $color-brown 
+              display: flex 
+              justify-content: center
+              span
+                position: relative
+                &:before
+                  content: ''
+                  border-bottom: 2px dashed #C5A47E
+                  display: block
+                  width: 100%
+                  position: absolute
+                  top: -8px
+                  left: 0
+                  transition: width 0.3s ease-out
+                &:hover
+                  &:before
+                    width: 0
+
+// Секция "О нас" =======================================
+section.about-us 
+  background: url('../img/stock-vectexture-advantages.jpg') no-repeat
+  background-size: cover
+  padding: 60px 0
+  .container 
+    .row 
+      .about-us-list 
+        padding: 0 15px
+        flex: 0 0 70%
+        @media screen and ( max-width: 1200px )
+          padding-left: 0
+        @media screen and ( max-width: 768px )
+          flex: 0 0 100%
+        ul 
+          margin-bottom: 35px
+          li
+            position: relative
+            margin: 0 0 20px 20px
+            &:before
+              border: 1px solid transparent
+              position: absolute
+              left: -20px
+              top: 7px
+              width: 4px
+              height: 4px
+              border-radius: 50%
+              background: $color-brown
+              content: ""
+        button 
+          background: $color-brown
+          box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25)
+          border: none
+          padding: 13px 32px
+          font-size: 18px
+          font-weight: bold
+          bottom: 0
+          transition: .3s
+          &:hover 
+            background: #9a7f60
+      .about-us-img
+        position: relative
+        padding: 0 15px
+        flex: 0 0 30%
+        justify-content: flex-end
+        display: flex
+        align-items: center
+        @media screen and ( max-width: 768px )
+          display: none
+        img 
+          max-height: 100%
+          max-width: 100%
+          position: absolute
+          object-fit: cover
+
+// Секция "Обратная связь. Карусель" =======================================
+section.feedback-carousel 
+  h2 
+    margin-bottom: 36px
+  .container 
+    @media screen and (max-width: 1200px)
+      width: calc( 100% - 105px )
+    @media screen and (max-width: 520px)
+      width: 100%
+    .owl-carousel
+      .item 
+        .row
+          .col-block-two 
+            position: relative
+            flex: 0 0 46%
+            padding: 0
+            margin: 0 15px
+            min-height: 350px
+            @media screen and (max-width: 1026px)
+              flex: 0 0 95%
+            @media screen and (max-width: 520px)
+              min-height: 259px
+              flex: 0 0 100%
+              margin: 0
+          .col-block-text 
+            flex-direction: column
+            justify-content: center
+            h5 
+              font-weight: bold
+              margin-bottom: 19.5px
+            p 
+              line-height: 150%
+              letter-spacing: 0.02em
+              max-height: 148px
+              overflow-y: scroll
+
+// Секция "Этапы работ" ==========================
+section.stages-of-work 
+  background: url('../img/stock-vectexture-advantages.jpg') no-repeat
+  background-size: cover
+  padding: 60px 0
+  .container 
+    width: calc( 100% - 485px )
+    @media screen and (max-width: 1400px)
+      width: calc(100% - 105px)
+    @media screen and (max-width: 1200px)
+      width: 100%
+    .row 
+      .col-block-two 
+        display: flex
+        align-items: center
+        @media all and ( max-width: 992px )
+          flex: 0 0 100%         
+        ul
+          li
+            position: relative
+            padding: 38px 0 38px 95px
+            font-size: 20px
+            line-height: 150%
+            letter-spacing: 0.02em
+            color: rgba(0, 0, 0, 0.8)
+            @media all and ( max-width: 560px )
+              padding: 92px 0 38px 
+            span              
+              color: #fff
+              font-weight: bold
+              font-size: 35px
+              line-height: 43px
+              position: absolute
+              left: 32px
+              top: 37%
+              transform: translate(-37%)
+              z-index: 1
+              @media all and ( max-width: 560px ) 
+                top: 21px
+              &:before
+                border: 1px solid transparent
+                position: absolute
+                left: -13px
+                top: -5px
+                width: 53px
+                height: 53px
+                background: rgba(0, 0, 0, 0.85)
+                transform: rotate(-45deg)
+                content: ""
+                z-index: -1
+              &:after 
+                border: 2px solid
+                position: absolute
+                left: -8px
+                top: 0
+                border-image-slice: 1
+                width: 43px
+                border-width: 2px
+                height: 43px
+                border-image-source: linear-gradient(90deg, rgba(197, 164, 126, 0.31) 0%, rgba(197, 164, 126, 1) 35%, rgba(197, 164, 126, 0.31) 100%)
+                transform: rotate(-45deg)
+                content: ""
+
+// Подвал сайта =====================================
+footer  
+  .form 
+    background: transparent
+    padding: 0 57px
+    @media screen and ( max-width: 1400px )
+      padding: 0 15px
+    @media screen and (max-width: 715px)
+      padding: 0
+    
+
+// Текстура секций ==========================
+section.feedback-carousel,
+section.our-work,
+section.make-dreams,
+footer
+  background: url('../img/rectangle-23.jpg') no-repeat 
+  background-size: cover
+  padding: 60px 0
+  position: relative
+  z-index: 1
+  &:before 
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background:  rgba(0, 0, 0, 0.65)
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25)
+    z-index: -1
+
+// стили карусели =================================
+.owl-carousel .owl-item
+  position: relative
+  img 
+    position: absolute
+    object-fit: contain
+    height: 100%
+    width: 100%
+.owl-nav [class*=owl-] 
+  position: absolute
+  top: 40%
+  margin-top: -20px
+  width: 30px
+  height: 20px
+  &:hover 
+    background: transparent!important
+  @media screen and (max-width: 520px) 
+    display: none!important
+.owl-nav button.owl-prev,
+.owl-nav button.owl-next
+  background: transparent
+  &:focus 
+    outline: none
+  &:after,
+  &:before 
+    content: ''
+    border-bottom: 3px solid rgb(158, 158, 158)
+    display: block
+    width: 40px
+  &:hover 
+    &:after,
+    &:before
+      border-bottom: 3px solid #c4933a
+  span 
+    display: none
+.owl-nav button.owl-prev 
+  left: -53px
+  &:after
+    transform: rotate(45deg)
+  &:before 
+    transform: rotate(-45deg)
+    margin-bottom: 24px
+.owl-nav button.owl-next 
+  right: -45px
+  &:after
+    transform: rotate(-45deg)
+  &:before 
+    transform: rotate(45deg)
+    margin-bottom: 24px
+.owl-theme .owl-dots
+  margin-top: 35px
+  @media screen and ( max-width: 1024px )
+    margin-top: 0
+  .owl-dot   
+    span 
+      width: 16px
+      height: 16px
+      border: 1px solid rgba(255, 255, 255, 0.7)
+      background: transparent
+      transform: rotate(-45deg)
+      border-radius: 0
+      position: relative     
+    &.active
+      span 
+        background: transparent
+        &::after
+          content: ''
+          width: 11px
+          height: 11px
+          border: none
+          background: #fff
+          display: block
+          position: absolute
+          top: 0
+          left: 0
+          right: 0
+          bottom: 0
+          margin: auto
+    &:focus 
+      outline: none
+
+// Стили формы =============================================
+.form 
+  background: rgba(197, 164, 126, 0.1); 
+  padding: 42px 124px 22px
+  @media screen and (max-width: 992px)  
+    padding: 42px 38px
+  @media screen and (max-width: 450px)  
+    padding: 42px 15px    
+  h5 
+    padding: 15px 25px
+  .form__group 
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    @media screen and (max-width: 668px) 
+      display: block
+      margin-bottom: 15px
+    .form-control 
+      min-width: 38.5%
+      margin-right: 3px
+      padding: 11px 28px
+      margin-bottom: 15px
+      background: #fff
+      transition: .3s
+      @media screen and (max-width: 860px) 
+        width: 100% 
+        margin-bottom: 42px
+      &:hover 
+        background: #ffe9c8
+    .form__group_btn
+      min-width: 20%
+      padding: 11px 28px
+      margin-bottom: 15px
+      background: #fff
+      @media screen and (max-width: 860px) 
+        display: block
+        margin: 0 auto
+      &:hover 
+        background:#cda569
+  
+// модальное окно ===================================
+.modal 
+  width: 100%
+  height: 100vh
+  background: url('../img/header-photo.jpg') no-repeat
+  background-size: cover
+  position: fixed
+  top: 0
+  display: none
+  z-index: 99999
+  .modal-body 
+    height: 100%
+    display: flex
+    flex-direction: column
+    justify-content: center
+    .modal-body__title
+      font-size: 72px
+      padding: 47px 0 47px
+      @media screen and (max-width: 1200px) 
+        font-size: 8vw
+      @media screen and (max-width: 425px) 
+        font-size: 16px  
+    .modal-body__subtitle
+      color: $color-brown
+      max-width: 700px
+      margin: 0 auto
+
+// стили полосы прокрутки =====================================
+::-webkit-scrollbar
+  width: 2px
+  background-color: transparent
+::-webkit-scrollbar-thumb 
+  border-radius: 2px
+  background-color: #D39C74
