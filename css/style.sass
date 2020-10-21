@@ -289,6 +289,9 @@ section.make-dreams
         min-height: 370px
         position: relative
         padding: 0 15px
+        display: flex 
+        flex-direction: column
+        justify-content: space-between
         @media screen and (max-width: 1200px)
           flex: 0 0 100%
           margin-bottom: 60px
@@ -296,7 +299,7 @@ section.make-dreams
           padding: 0
         p 
           margin-bottom: 20px
-          max-height: 271px
+          max-height: 195px
           position: relative
           // overflow-y: scroll
         .make-dreams-box__info_btn
@@ -306,11 +309,12 @@ section.make-dreams
           padding: 13px 32px
           font-size: 18px
           font-weight: bold
-          position: absolute
-          bottom: 0
+          width: 50%
+          // position: absolute
+          // bottom: 0
           transition: .3s
-          @media screen and (max-width: 1200px)
-            position: relative
+          @media screen and (max-width: 520px)
+            width: 100%
           &:hover 
             background: #9a7f60
       .make-dreams-box__img
