@@ -149,6 +149,15 @@ h5 {
   }
 }
 
+@media all and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .col-3 {
+    -ms-flex: 30.333%;
+  }
+  .col-4 {
+    -ms-flex: 22%;
+  }
+}
+
 .col-block-two {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 50%;
@@ -420,6 +429,13 @@ header .header-nav .header-nav__contact a:last-of-type {
   font-size: 14px;
   color: #C5A47E;
   text-align: end;
+}
+
+@media all and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  header .header-nav .header-nav__contact a:last-of-type {
+    position: relative;
+    max-width: 57%;
+  }
 }
 
 header .header-nav .header-nav__contact a:last-of-type span {
