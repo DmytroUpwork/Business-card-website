@@ -545,7 +545,7 @@ section.our-advantages .our-advantages__card .container .card .card-body {
 
 section.our-advantages .our-advantages__card .container .card .card-body p {
   max-height: 212px;
-  overflow-y: scroll;
+  position: relative;
 }
 
 @media screen and (min-width: 1480px) {
@@ -591,7 +591,7 @@ section.make-dreams .container .make-dreams-box .make-dreams-box__info {
 section.make-dreams .container .make-dreams-box .make-dreams-box__info p {
   margin-bottom: 20px;
   max-height: 271px;
-  overflow-y: scroll;
+  position: relative;
 }
 
 section.make-dreams .container .make-dreams-box .make-dreams-box__info .make-dreams-box__info_btn {
@@ -687,7 +687,7 @@ section.finishing-work .container .row .col-4 .card .card__body h5 {
 
 section.finishing-work .container .row .col-4 .card .card__body p {
   max-height: 135px;
-  overflow-y: scroll;
+  position: relative;
 }
 
 section.our-work .container {
@@ -920,7 +920,7 @@ section.feedback-carousel .container .owl-carousel .item .row .col-block-text p 
   line-height: 150%;
   letter-spacing: 0.02em;
   max-height: 148px;
-  overflow-y: scroll;
+  position: relative;
 }
 
 section.stages-of-work {
@@ -1327,15 +1327,5 @@ footer:before {
   color: #C5A47E;
   max-width: 700px;
   margin: 0 auto;
-}
-
-::-webkit-scrollbar {
-  width: 2px;
-  background-color: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-  border-radius: 2px;
-  background-color: #D39C74;
 }
 /*# sourceMappingURL=style.css.map */

@@ -32,4 +32,10 @@ $(document).ready(function () {
       },
     },
   });
+
+  // Полоса прокрутки Perfect Scrollbar циклом ===============
+  $(".box-scrollbar").each(function () {
+    const ps = new PerfectScrollbar($(this)[0]);
+  });
+
 });
