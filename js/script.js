@@ -13,7 +13,7 @@ $(document).ready(function () {
   });
   // Маска для телефона ====================
   $(function () {
-    $("#telmask").mask("+38(999) 999-99-99");
+    $(".telmask").mask("+38(999) 999-99-99");
   });
   // Карусель =========================
   $(".owl-carousel").owlCarousel({
@@ -39,13 +39,13 @@ $(document).ready(function () {
   });
 
   // Адаптивность картинок под IE 10+ =============================
-  function ibg(){
-    $.each($('.ibg'), function(index, val) {
-      if($(this).find('img').length>0){
-        $(this).css('background-image','url("'+$(this).find('img').attr('src')+'")');
-      }
-    });
-  };
-  ibg();
+  // function ibg(){
+  //   $.each($('.ibg'), function(index, val) {
+  //     if($(this).find('img').length>0){
+  //       $(this).css('background-image','url("'+$(this).find('img').attr('src')+'")');
+  //     }
+  //   });
+  // };
+  // ibg();
 
 });

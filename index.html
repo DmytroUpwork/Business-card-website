@@ -9,6 +9,9 @@
   <link rel="stylesheet" href="./libs/perfect-scrollbar/perfect-scrollbar.css">
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/style.css">
+  <!--[if IE]>
+    <link rel="stylesheet" type="text/css" href="all-ie.css" />
+  <![endif]-->
   <title>Business card website</title>
 </head>
 <body>
@@ -48,11 +51,11 @@
         <h3>każdego rodzaju w Warszawie</h3>
       </div>
       <div class="container">
-        <form action="" class="form">
+        <form class="form">
           <h5 class="text-white">Bezpłatna konsultacja</h5>
           <div class="form__group">
             <input type="text" class="form-control" placeholder="Twoje imię*" required>
-            <input type="tel" id="telmask" class="form-control" name="phone" pattern="[\+]\d{2}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" placeholder="Twój telefon*" required>
+            <input type="tel" class="form-control telmask" name="phone" pattern="[\+]\d{2}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" placeholder="Twój telefon*" required>
             <button type="submit" class="form__group_btn btn text-uppercase toggle-modal">konsultacja</button>
           </div>
         </form>
@@ -272,7 +275,7 @@
             </ul>
             <button type="submit" class="make-dreams-box__info_btn btn text-uppercase text-white toggle-modal">konsultacja</button>
           </div>
-          <div class="about-us-img ibg">
+          <div class="about-us-img">
             <img src="./img/logo/logo-min.png" alt="Logo">
           </div>
         </div>
@@ -359,10 +362,10 @@
     <!-- Модальное окно ===================== -->
     <div class="modal">
       <div class="modal-body container">
-        <div class="modal-body__logo text-center ibg">
+        <div class="modal-body__logo text-center">
           <img src="./img/logo/logo-min.png" alt="Logo">
         </div>
-        <h1 class="modal-body__title text-white text-center">DZIĘKUJEMY ZA SKONTAKTOWANIE SIĘ!</h1>
+        <h2 class="modal-body__title text-white text-center">DZIĘKUJEMY ZA SKONTAKTOWANIE SIĘ!</h2>
         <h3 class="modal-body__subtitle text-center">otrzymaliśmy twoją aplikację 
           w najbliższym czasie nasz kierownik
           skontaktuje się z tobą
@@ -373,11 +376,11 @@
   </main>
   <footer>
     <div class="container">
-      <form action="" class="form">
+      <form class="form">
         <h5 class="text-white">Bezpłatna konsultacja</h5>
         <div class="form__group">
           <input type="text" class="form-control" placeholder="Twoje imię*" required>
-          <input type="tel" id="telmask" class="form-control" name="phone" pattern="[\+]\d{2}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" placeholder="Twój telefon*" required>
+          <input type="tel" class="form-control telmask" name="phone" pattern="[\+]\d{2}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" placeholder="Twój telefon*" required>
           <button type="submit" class="form__group_btn btn text-uppercase toggle-modal">konsultacja</button>
         </div>
       </form>
