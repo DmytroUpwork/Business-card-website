@@ -619,7 +619,7 @@ section.make-dreams .container .make-dreams-box .make-dreams-box__info .make-dre
   padding: 13px 32px;
   font-size: 18px;
   font-weight: bold;
-  width: 50%;
+  width: 200px;
   -webkit-transition: .3s;
   transition: .3s;
 }
